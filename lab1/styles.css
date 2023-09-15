@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+[centered-text] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[image] {
+    background-image: url(https://media.tenor.com/nBt6RZkFJh8AAAAi/never-gonna.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.top{
+    padding: 0;
+    margin: 0;
+    height: 25%;
+    background-color: #fc5165;
+}
+
+.right {
+    width: 25%;
+    height: 70%;
+    float: right;
+    background-color: #008801;
+}
+
+header {
+    height: 30%;
+    background-color: #0041ff;
+}
+
+main.float {
+    height: 75%;
+}
+
+.left-float {
+    width: 75%;
+    height: 70%;
+
+    float: left;
+    background-color: #36ff46;
+}
+
+

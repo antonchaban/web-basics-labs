@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+    width: 100%; /* Match the width of the second grid */
+    height: 100%; /* Match the height of the second grid */
+    display: grid;
+    grid-template-columns: 25% 50% 25%; /* Adjust column widths to match the second grid */
+    grid-template-rows: 30% 19% 51%; /* Adjust row heights to match the second grid */
+    gap: 0; /* Remove gap between grid items */
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header"
+    "top-grid top-grid top-grid"
+    "left-grid left-grid right-grid"; /* Adjust grid areas to match the second grid */
+}
+
+
+.header {
+    background-color: #0041ff;
+    grid-area: header;
+}
+
+.top-grid {
+    background-color: #fc5165;
+    grid-area: top-grid;
+}
+
+.left-grid {
+    background-color: #36ff46;
+    grid-area: left-grid;
+}
+
+.right-grid {
+    background-color: #008801;
+    grid-area: right-grid;
+}
+
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    background-image: url(https://media.tenor.com/nBt6RZkFJh8AAAAi/never-gonna.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
