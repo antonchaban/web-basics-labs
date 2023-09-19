@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anton Chaban IT01 Lab2 Variant 106</title>
+</head>
+<body>
+<form id="myForm">
+    <label for="pib">ПІБ:</label>
+    <input type="text" id="pib" name="pib" required
+           pattern="^[А-ЯІЇЄҐA-Z][а-яіїєґ'A-Za-z]+ [А-ЯІЇЄҐA-Z]\.[А-ЯІЇЄҐA-Z]\.$"><br><br>
+
+    <label for="variant">Варіант:</label>
+    <input type="text" id="variant" name="variant" required pattern="^\d{1,2}$"><br><br>
+
+    <label for="group">Група:</label>
+    <input type="text" id="group" name="group" required pattern="^[А-ЯІЇЄҐA-Z][А-ЯІЇЄҐA-Z]-\d{2}$"><br><br>
+
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" name="phone" required pattern="^\(\d{3}\)-\d{3}-\d{2}-\d{2}$"><br><br>
+
+    <label for="idCard">ID-card:</label>
+    <input type="text" id="idCard" name="idCard" required pattern="^[А-ЯІЇЄҐA-Z][А-ЯІЇЄҐA-Z] №\d{6}$"><br><br>
+
+    <input type="submit" value="Перевірити">
+</form>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
