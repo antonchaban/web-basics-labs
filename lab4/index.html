@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+</head>
+<body>
+<ul id="messages"></ul>
+<input id="messageInput" autocomplete="off"/>
+<button id="messageButton">Send</button>
+
+<script>
+    const socket = io();
+
+    $('#messageButton').click(() => {
+        const message = $('#messageInput').val();
+        socket.emit('chat message', message);
+        $('#messageInput').val('');
+    });
+
+    socket.on('chat message', (data) => {
+        const {userId, message} = data;
+        $('#messages').append($('<li>').text(`User ${userId}: ${message}`));
+    });
+</script>
+
+</body>
+</html>
