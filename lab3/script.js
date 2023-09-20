@@ -18,14 +18,15 @@ async function add() {
     const person = await getRandomPerson();
 
     const temple = `
-    <div class="card">
-        <img src="${person.picture.medium}" alt="error">
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="${person.picture.medium}" alt="error">
         <div>
-            <p><b>Name:</b><br>${person.name.title + " " + person.name.first + " " + person.name.last}</p>
-            <p><b>City:</b><br>${person.location.city}</p>
-            <p><b>Country:</b><br>${person.location.country}</p>
-            <p><b>Postcode:</b><br>${person.location.postcode}</p>
-            <hr>
+    <h5 class="card-title"><b>Name:</b><br>${person.name.title + " " + person.name.first + " " + person.name.last}</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>City:</b><br>${person.location.city}</li>
+        <li class="list-group-item"><b>Country:</b><br>${person.location.country}</li>
+        <li class="list-group-item"><b>Postcode:</b><br>${person.location.postcode}</li>
+    </ul>
         </div>
     </div>`;
 
