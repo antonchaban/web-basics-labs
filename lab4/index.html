@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <input id="messageInput" class="form-control mb-2" autocomplete="off" />
+                    <input id="messageInput" class="form-control mb-2" autocomplete="off"/>
                     <button id="messageButton" class="btn btn-primary btn-block">Send</button>
                 </div>
             </div>
@@ -35,7 +35,7 @@
     });
 
     socket.on('chat message', (data) => {
-        const { userId, message } = data;
+        const {userId, message} = data;
         $('#messages').append($('<li>').addClass('list-group-item').text(`User ${userId}: ${message}`));
     });
 </script>
